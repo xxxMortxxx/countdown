@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+
+.header {
+  flex-grow: 1;
+  background-color: rgba(65, 65, 65, 0.5);
+  font-family: "TMSans-Bold", Arial, serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.time-container {
+  display: flex;
+  flex-grow: 2;
+}
+
+.time {
+  color: #414141;
+  background-color: rgba(250, 250, 250, .8);
+  font-size: 38px;
+  font-family: InterstateWGL-Black, Arial, serif;
+}
+
+.time-units-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.time-unit {
+
+}
+
+.time {
+
+}
