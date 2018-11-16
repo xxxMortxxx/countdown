@@ -40,16 +40,16 @@ export default class CountdownTimer extends Component {
       <div className={styles.wrapper}>
         <div className={styles.header}>TIME LEFT</div>
         <div className={styles.timeContainer}>
-          <div>{months}</div>
-          <div>{days}</div>
-          <div>{hours}</div>
-          <div>{minutes}</div>
+          <div className={styles.time}>{months}</div>
+          <div className={styles.time}>{days}</div>
+          <div className={styles.time}>{hours}</div>
+          <div className={styles.time}>{minutes}</div>
         </div>
         <div className={styles.timeUnitsContainer}>
-          <div>MONTH</div>
-          <div>DAYS</div>
-          <div>HRS</div>
-          <div>MIN</div>
+          <div className={styles.timeUnit}>MONTH</div>
+          <div className={styles.timeUnit}>DAYS</div>
+          <div className={styles.timeUnit}>HRS</div>
+          <div className={styles.timeUnit}>MIN</div>
         </div>
       </div>
     )

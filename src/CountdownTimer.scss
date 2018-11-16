@@ -1,3 +1,5 @@
+$baseMargin: 5px;
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -15,9 +17,15 @@
 .time-container {
   display: flex;
   flex-grow: 2;
+  justify-content: space-between;
 }
 
 .time {
+  &:not(:last-child) {
+    margin-right: $baseMargin;
+  }
+
+  flex-grow: 1;
   color: #414141;
   background-color: rgba(250, 250, 250, .8);
   font-size: 38px;
@@ -26,11 +34,17 @@
 
 .time-units-container {
   display: flex;
-  flex-grow: 1;
+  flex-basis: 1;
+  justify-content: space-between;
 }
 
 .time-unit {
+  background-color: rgba(65, 65, 65, 0.5);
+  flex-grow: 1;
 
+  &:not(:last-child) {
+    margin-right: $baseMargin;
+  }
 }
 
 .time {
