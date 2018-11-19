@@ -3,15 +3,19 @@ $baseMargin: 5px;
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100px;
 }
 
 .header {
+  display: flex;
   flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  color: white;
   background-color: rgba(65, 65, 65, 0.5);
   font-family: "TMSans-Bold", Arial, serif;
   font-size: 14px;
-  text-align: center;
 }
 
 .time-container {
@@ -21,11 +25,10 @@ $baseMargin: 5px;
 }
 
 .time {
-  &:not(:last-child) {
-    margin-right: $baseMargin;
-  }
-
-  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24.25%;
   color: #414141;
   background-color: rgba(250, 250, 250, .8);
   font-size: 38px;
@@ -34,19 +37,19 @@ $baseMargin: 5px;
 
 .time-units-container {
   display: flex;
-  flex-basis: 1;
   justify-content: space-between;
 }
 
 .time-unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(65, 65, 65, 0.5);
-  flex-grow: 1;
+  width: 24.25%;
+  color: white;
 
   &:not(:last-child) {
     margin-right: $baseMargin;
   }
 }
 
-.time {
-
-}

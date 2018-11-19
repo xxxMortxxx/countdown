@@ -37,7 +37,7 @@ export default class CountdownTimer extends Component {
     const { months, days, hours, minutes } = this.state.countdown;
 
     return (
-      <div className={styles.wrapper}>
+      <div className={`${styles.wrapper} ${this.props.wrapperClassName}`}>
         <div className={styles.header}>TIME LEFT</div>
         <div className={styles.timeContainer}>
           <div className={styles.time}>{months}</div>

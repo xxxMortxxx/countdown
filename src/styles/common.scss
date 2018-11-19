@@ -1,0 +1,9 @@
+$baseURL: 'localhost://';
+
+@mixin addFont($fontFamily) {
+  @font-face {
+    font-family: $fontFamily;
+    src:  url('myfont.woff2') format('woff2'),
+    url('myfont.woff') format('woff');
+  }
+}

@@ -6,10 +6,15 @@ $baseMargin: 25px;
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  background-image: url("https://s1.ticketm.net/dam/a/5b7/6e74fa87-c37d-4935-b1bb-6f28102f95b7_234851_TABLET_LANDSCAPE_3_2.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
   box-sizing: border-box;
   width: 350px;
   height: 600px;
@@ -90,3 +95,19 @@ $baseMargin: 25px;
   font-kerning: normal;
 }
 
+.gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%), -moz-linear-gradient(top, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 15%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.9) 100%), -webkit-linear-gradient(top, rgba(0,0,0,0.12) 0%,rgba(0,0,0,0) 15%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%), linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 15%);
+}
+
+.countdown-wrapper {
+  @include horizontalMargin();
+  margin-top: 48px;
+}

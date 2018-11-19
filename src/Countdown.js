@@ -10,7 +10,8 @@ export default class Countdown extends Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        <CountdownTimer date="2018-11-20T01:15:00Z"/>
+        <div className={styles.gradient}></div>
+        <CountdownTimer date="2018-11-20T01:15:00Z" wrapperClassName={styles.countdownWrapper}/>
         <div className={styles.eventName}>RUTGERS SCARLET KNIGHTS FOOTBALL AT PENN STATE NITTANY LIONS FOOTBAFDS FSD FDSF SD</div>
         <div cl>Sat, Nov 30, 2019</div>
         <div>Beaver StadiumCurtin Rd & Porter Rd</div>
