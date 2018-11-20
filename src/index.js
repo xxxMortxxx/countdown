@@ -1,5 +1,6 @@
 import { h, render } from 'preact';
-import Countdown from './Countdown';
+import Countdown from './components/countdown/Countdown';
+import './index.scss';
 
 const insertWidgetComponent = (elementNode) => {
   render((<Countdown />), elementNode)

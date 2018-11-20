@@ -1,11 +1,5 @@
-.block {
-  border: 1px solid black;
+@import "common-styles/common";
 
-  &_element {
-    color: red;
-
-    &_modifier {
-      background-color: deepskyblue;
-    }
-  }
-}
+@include addFont('TMSans-Bold');
+@include addFont('TMSans-Light');
+@include addFont('TMSans-Regular');

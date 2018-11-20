@@ -7,9 +7,7 @@ $baseMargin: 25px;
 
 .wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+
   background-image: url("https://s1.ticketm.net/dam/a/5b7/6e74fa87-c37d-4935-b1bb-6f28102f95b7_234851_TABLET_LANDSCAPE_3_2.jpg");
   background-size: cover;
   background-position-x: center;
@@ -18,11 +16,6 @@ $baseMargin: 25px;
   box-sizing: border-box;
   width: 350px;
   height: 600px;
-  background-color: lightgrey;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-
 }
 
 .event-countdown-time {
@@ -33,7 +26,9 @@ $baseMargin: 25px;
 .event-name {
   @include horizontalMargin();
 
+  margin-top: 2em;
   flex-grow: 2;
+  color: white;
   text-transform: uppercase;
   font-size: 24px;
   font-family: "TMSans-Bold", Arial, serif;
@@ -50,10 +45,14 @@ $baseMargin: 25px;
   @include horizontalMargin();
 
   flex-grow: 1;
+  color: #9fa5ae;
+  font-family: "TMSans-Light", Arial, serif;
 }
 
 .event-date {
+  color: white;
   @include horizontalMargin();
+  font-family: "TMSans-Bold", Arial, serif;
 
   flex-grow: 0.4;
 }
@@ -72,6 +71,18 @@ $baseMargin: 25px;
   line-height: 35px;
   display: inline;
   align-self: center;
+  font-family: "TMSans-Regular", Arial, serif;
+  opacity: 0.7;
+  text-decoration: none;
+  color: white;
+
+  &:hover, &:focus, &:active {
+    color: #019cde
+  }
+}
+
+.powered-by-text {
+  font-family: "TMSans-Regular", Arial, serif;
 }
 
 .buy-button {
@@ -80,22 +91,33 @@ $baseMargin: 25px;
   padding: 5px 10px;
   border-radius: 4px;
   background-color: #009cde;
+  font-size: 10px;
+
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
   line-height: 16px;
   color: #ffffff;
   text-align: center;
   -webkit-transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  font-family: "TMSans-Bold", Arial, serif;
   z-index: 1;
-
-  font: 400 10px/1.5 Helvetica,Arial,sans-serif;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #2A7CC7;
+  }
 }
 
 .gradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,4 +132,8 @@ $baseMargin: 25px;
 .countdown-wrapper {
   @include horizontalMargin();
   margin-top: 48px;
+}
+
+.tm-logo {
+  height: 50%;
 }

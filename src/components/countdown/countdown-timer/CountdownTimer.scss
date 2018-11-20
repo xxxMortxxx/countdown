@@ -32,7 +32,8 @@ $baseMargin: 5px;
   color: #414141;
   background-color: rgba(250, 250, 250, .8);
   font-size: 38px;
-  font-family: InterstateWGL-Black, Arial, serif;
+  font-family: Arial, serif;
+  font-weight: 900;
 }
 
 .time-units-container {
@@ -47,6 +48,7 @@ $baseMargin: 5px;
   background-color: rgba(65, 65, 65, 0.5);
   width: 24.25%;
   color: white;
+  font-family: "TMSans-Bold", Arial, serif;
 
   &:not(:last-child) {
     margin-right: $baseMargin;

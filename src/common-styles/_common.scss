@@ -1,0 +1,11 @@
+@mixin addFont($fontFamily) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url("./assets/fonts/#{$fontFamily}/#{$fontFamily}.eot");
+    src:
+          url("./assets/fonts/#{$fontFamily}/#{$fontFamily}.woff") format("woff"),
+          url("./assets/fonts/#{$fontFamily}/#{$fontFamily}.otf") format("opentype"),
+          url('./assets/fonts/#{$fontFamily}/#{$fontFamily}.ttf')  format('truetype'),
+          url("./assets/fonts/#{$fontFamily}/#{$fontFamily}.svg#filename") format("svg");
+  }
+}
