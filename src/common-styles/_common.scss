@@ -1,3 +1,4 @@
+//mixins
 @mixin addFont($fontFamily) {
   @font-face {
     font-family: $fontFamily;
@@ -9,3 +10,12 @@
           url("./assets/fonts/#{$fontFamily}/#{$fontFamily}.svg#filename") format("svg");
   }
 }
+
+@mixin horizontalMargin($margin) {
+  margin-right: $margin;
+  margin-left: $margin;
+}
+
+//widget themes
+$smallTheme: 'small-theme';
+$largeTheme: 'large-theme';

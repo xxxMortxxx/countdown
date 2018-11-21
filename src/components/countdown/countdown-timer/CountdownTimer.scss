@@ -4,7 +4,7 @@ $baseMargin: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100px;
+  height: 115px;
 }
 
 .header {
@@ -16,19 +16,22 @@ $baseMargin: 5px;
   background-color: rgba(65, 65, 65, 0.5);
   font-family: "TMSans-Bold", Arial, serif;
   font-size: 14px;
+  margin-bottom: 3px;
 }
 
 .time-container {
   display: flex;
-  flex-grow: 2;
+  height: 58px;
   justify-content: space-between;
+  margin-bottom: 3px;
 }
 
 .time {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24.25%;
+  width: 24.00%;
+  margin-right: 3px;
   color: #414141;
   background-color: rgba(250, 250, 250, .8);
   font-size: 38px;
@@ -38,6 +41,7 @@ $baseMargin: 5px;
 
 .time-units-container {
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
@@ -46,12 +50,52 @@ $baseMargin: 5px;
   justify-content: center;
   align-items: center;
   background-color: rgba(65, 65, 65, 0.5);
-  width: 24.25%;
+  width: 24.00%;
   color: white;
   font-family: "TMSans-Bold", Arial, serif;
+  font-size: 10px;
 
   &:not(:last-child) {
     margin-right: $baseMargin;
   }
 }
 
+// theme specific styles
+:global(.tkm-countdown-small-theme) {
+
+  .wrapper {
+    height: 60px;
+  }
+
+  .header {
+    font-size: 10px;
+    min-height: 12px;
+    max-height: 12px;
+  }
+
+  .time-container {
+    min-height: 27px;
+    max-height: 27px;
+  }
+
+  .time {
+    padding-right: 3px;
+    font-size: 18px;
+    justify-content: flex-end;
+  }
+
+  .time-units-container {
+    margin-top: -30px;
+  }
+
+  .time-unit {
+    padding: 3px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    color: #414141;
+    font-size: 8px;
+    font-family: "TMSans-Regular", Arial, serif;
+  }
+
+}

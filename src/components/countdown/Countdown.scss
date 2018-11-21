@@ -1,9 +1,6 @@
-$baseMargin: 25px;
+@import '~common-styles/common';
 
-@mixin horizontalMargin() {
-  margin-right: $baseMargin;
-  margin-left: $baseMargin;
-}
+$baseMargin: 25px;
 
 .wrapper {
   position: relative;
@@ -14,17 +11,19 @@ $baseMargin: 25px;
   background-position-y: top;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  width: 350px;
   height: 600px;
+  width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .event-countdown-time {
-  @include horizontalMargin();
+  @include horizontalMargin($baseMargin);
   flex-grow: 4;
 }
 
 .event-name {
-  @include horizontalMargin();
+  @include horizontalMargin($baseMargin);
 
   margin-top: 2em;
   flex-grow: 2;
@@ -36,34 +35,36 @@ $baseMargin: 25px;
   overflow:hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   word-wrap:break-word;
+  max-height: 180px;
 }
 
 .event-venue {
-  @include horizontalMargin();
+  @include horizontalMargin($baseMargin);
 
   flex-grow: 1;
-  color: #9fa5ae;
+  color: #dcdcdc;
   font-family: "TMSans-Light", Arial, serif;
+  font-size: 12px;
+  margin-top: 11px;
 }
 
 .event-date {
   color: white;
-  @include horizontalMargin();
+  @include horizontalMargin($baseMargin);
   font-family: "TMSans-Bold", Arial, serif;
-
+  margin-top: 20px;
   flex-grow: 0.4;
 }
 
 .buy-action-container {
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.8);
-  height: 36px;
-  justify-self: flex-end;
+  min-height: 36px;
+  padding-left: $baseMargin;
 }
 
 .legal-notice {
@@ -75,6 +76,7 @@ $baseMargin: 25px;
   opacity: 0.7;
   text-decoration: none;
   color: white;
+  font-size: 11px;
 
   &:hover, &:focus, &:active {
     color: #019cde
@@ -82,25 +84,36 @@ $baseMargin: 25px;
 }
 
 .powered-by-text {
+  margin: 0 auto;
+  flex-grow: 1;
   font-family: "TMSans-Regular", Arial, serif;
+  font-size: 11px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover, &:active, &:visited {
+    color: black;
+  }
 }
 
 .buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 74px;
-  height: 24px;
+  height: 20px;
   padding: 5px 10px;
   border-radius: 4px;
   background-color: #009cde;
   font-size: 10px;
 
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
   line-height: 16px;
   color: #ffffff;
   text-align: center;
-  -webkit-transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   font-family: "TMSans-Bold", Arial, serif;
   z-index: 1;
@@ -124,16 +137,46 @@ $baseMargin: 25px;
   right: 0;
   left: 0;
 
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%), -moz-linear-gradient(top, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 15%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.9) 100%), -webkit-linear-gradient(top, rgba(0,0,0,0.12) 0%,rgba(0,0,0,0) 15%);
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%), linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 15%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%), linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 15%);
 }
 
 .countdown-wrapper {
-  @include horizontalMargin();
+  @include horizontalMargin($baseMargin);
   margin-top: 48px;
 }
 
 .tm-logo {
-  height: 50%;
+  height: 16px;
+  margin-left: 5px;
+}
+
+// Small theme specific styles
+
+:global(.tkm-countdown-small-theme).wrapper {
+
+  width: 300px;
+  height: 250px;
+
+  .countdown-wrapper {
+    margin-top: 10px;
+  }
+
+  .event-name {
+    margin-top: 0;
+    font-size: 18px;
+    min-height: 48px;
+    max-height: 48px;
+    line-height: 24px;
+  }
+
+  .event-date {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+
+
+.large-theme {
+
 }
